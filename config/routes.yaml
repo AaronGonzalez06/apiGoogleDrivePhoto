@@ -1,0 +1,76 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+prueba:
+    path: /prueba
+    controller: App\Controller\PruebaController::index
+
+addUser:
+    path: /api/addUser
+    controller: App\Controller\UserController::create
+    methods: [POST]
+
+loginUser:
+    path: /api/login
+    controller: App\Controller\UserController::login
+    methods: [POST]
+
+editUser:
+    path: /api/user/edit
+    controller: App\Controller\UserController::edit
+    methods: [PUT]
+
+addCategory:
+    path: /api/category/add
+    controller: App\Controller\CategoryController::add
+    methods: [POST]
+
+deleteCategory:
+    path: /api/category/delete/{id}
+    controller: App\Controller\CategoryController::delete
+    methods: [DELETE]
+
+listCategory:
+    path: /api/category/list
+    controller: App\Controller\CategoryController::listCategory
+    methods: [POST]
+
+editCategory:
+    path: /api/category/edit/{id}
+    controller: App\Controller\CategoryController::edit
+    methods: [PUT]
+
+addImage:
+    path: /api/image/add
+    controller: App\Controller\ImageController::add
+    methods: [POST]
+
+deleteImage:
+    path: /api/image/delete/{id}
+    controller: App\Controller\ImageController::delete
+    methods: [DELETE]
+
+editImage:
+    path: /api/image/edit
+    controller: App\Controller\ImageController::edit
+    methods: [PUT]
+
+listImage:
+    path: /api/image/list
+    controller: App\Controller\ImageController::listImage
+    methods: [POST]
+
+listImageForCategory:
+    path: /api/image/listImageForCategory/{id}
+    controller: App\Controller\ImageController::listImageForCategory
+    methods: [POST]
+    
+image:
+    path: /api/image/{id}
+    controller: App\Controller\ImageController::image
+    methods: [GET]
+
+imagefilter:
+    path: /api/image/filter/{from}/{until}
+    controller: App\Controller\ImageController::filterImageDate
+    methods: [GET]
